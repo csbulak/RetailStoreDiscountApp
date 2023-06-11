@@ -1,0 +1,57 @@
++---------------------------------+
+|            Customer             |
++---------------------------------+
+| - Id: Guid                      |
+| - Name: string                  |
+| - UserType: UserType            |
+| - JoinDate: DateTime            |
+| - Invoices: ICollection<Invoice>|
++---------------------------------+
+             |
+             |      1
+             |
+             |
+             |
+             |
++---------------------------------+
+|            Invoice              |
++---------------------------------+
+| - Id: Guid                      |
+| - Amount: decimal               |
+| - DiscountedAmount: decimal     |
+| - CustomerId: Guid              |
+| - Customer: Customer            |
+| - Discounts: ICollection<Discount>|
+| - Items: ICollection<Item>      |
++---------------------------------+
+             |
+             |      1
+             |
+             |
+             |
+             |
++---------------------------------+
+|             Item                |
++---------------------------------+
+| - Id: Guid                      |
+| - Name: string                  |
+| - Price: decimal                |
+| - InvoiceId: Guid               |
+| - Invoice: Invoice              |
+| - ProductType: ProductType      |
++---------------------------------+
+             |
+             |      1
+             |
+             |
+             |
+             |
++---------------------------------+
+|            Discount             |
++---------------------------------+
+| - Id: Guid                      |
+| - Percentage: decimal           |
+| - InvoiceId: Guid               |
+| - Invoice: Invoice              |
++---------------------------------+
+

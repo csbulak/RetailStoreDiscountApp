@@ -1,0 +1,11 @@
+﻿using Shared.Enums;
+
+namespace Core.Dtos;
+
+public class UpdateCustomerDto
+{
+    public Guid Id { get; set; }
+    public string Name { get; set; }
+    public UserType UserType { get; set; }
+    public DateTime JoinDate { get; set; }
+}
